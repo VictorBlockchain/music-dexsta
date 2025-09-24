@@ -416,15 +416,15 @@ export default function ReviewerPage() {
                   <SubmissionForm onSubmit={() => setActiveTab("queue")} user={user} reviewerId={reviewer.id} />
                 ) : (
                   <Card className="bg-white/90 backdrop-blur-xl border-0 text-purple-900 shadow-2xl rounded-3xl">
-                    <CardContent className="text-center py-12 px-8">
-                      <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Music className="w-8 h-8 text-gray-400" />
+                    <CardContent className="text-center py-8 sm:py-12 px-4 sm:px-8">
+                      <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                        <Music className="w-6 h-6 sm:w-8 sm:h-8 text-gray-400" />
                       </div>
-                      <h3 className="text-xl font-semibold text-purple-900 mb-2">Reviewer Not Accepting Submissions</h3>
-                      <p className="text-purple-800 mb-4">
+                      <h3 className="text-lg sm:text-xl font-semibold text-purple-900 mb-2">Reviewer Not Accepting Submissions</h3>
+                      <p className="text-purple-800 mb-3 sm:mb-4 text-sm sm:text-base">
                         @{reviewer.tiktokHandle} has not enabled reviewer mode yet
                       </p>
-                      <p className="text-sm text-purple-700">
+                      <p className="text-xs sm:text-sm text-purple-700">
                         Check back later when they enable reviewer mode
                       </p>
                     </CardContent>
@@ -464,15 +464,16 @@ export default function ReviewerPage() {
               </>
             ) : (
               <Card className="bg-white/90 backdrop-blur-xl border-0 text-purple-900 shadow-2xl rounded-3xl">
-                <CardContent className="text-center py-8 px-8">
+                <CardContent className="text-center py-6 sm:py-8 px-4 sm:px-8">
                   <Button 
                     disabled 
-                    className="bg-gray-400 text-gray-600 px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg cursor-not-allowed mb-4"
+                    className="bg-gray-400 text-gray-600 px-4 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-semibold text-sm sm:text-lg shadow-lg cursor-not-allowed mb-3 sm:mb-4 w-full sm:w-auto"
                   >
-                    <Music className="w-5 h-5 mr-2" />
-                    Reviewer Not Accepting Submissions
+                    <Music className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                    <span className="hidden sm:inline">Reviewer Not Accepting Submissions</span>
+                    <span className="sm:hidden">Not Accepting</span>
                   </Button>
-                  <p className="text-purple-800 text-sm">
+                  <p className="text-purple-800 text-xs sm:text-sm">
                     @{reviewer.tiktokHandle} has not enabled reviewer mode yet
                   </p>
                 </CardContent>
