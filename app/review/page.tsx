@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, Suspense } from "react"
 import { useSearchParams } from "next/navigation"
 import { createClient } from "@/lib/supabase/client"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -21,7 +21,7 @@ interface User {
   id: string
 }
 
-export default function ReviewPage() {
+function ReviewPageContent() {
   const searchParams = useSearchParams()
   const [activeTab, setActiveTab] = useState(searchParams.get('tab') || "form")
   const [user, setUser] = useState<User | null>(null)
@@ -227,5 +227,30 @@ export default function ReviewPage() {
 
       <Footer />
     </div>
+  )
+}
+
+export default function ReviewPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 flex items-center justify-center">
+        <div className="text-center">
+          <div className="inline-flex items-center justify-center w-16 h-16 mb-6 relative group">
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-amber-400 rounded-3xl blur-xl opacity-70 animate-pulse"></div>
+            <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl w-full h-full flex items-center justify-center shadow-2xl">
+              <Music className="w-8 h-8 text-purple-600 animate-spin" />
+            </div>
+          </div>
+          <h1 className="text-3xl font-bold mb-3 tracking-tight font-heading">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-amber-300">
+              Loading...
+            </span>
+          </h1>
+          <p className="text-purple-100/80">Setting up your review experience</p>
+        </div>
+      </div>
+    }>
+      <ReviewPageContent />
+    </Suspense>
   )
 }
