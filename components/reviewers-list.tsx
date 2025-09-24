@@ -348,11 +348,12 @@ export function ReviewersList() {
         ) : (
           filteredReviewers.map((reviewer) => (
             <Card key={reviewer.id} className="bg-white/90 backdrop-blur-xl border-0 text-purple-900 shadow-lg rounded-2xl overflow-hidden">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  {/* Profile Image */}
-                  <div className="relative">
-                    <Avatar className="w-16 h-16 border-2 border-purple-200">
+              <CardContent className="p-4 sm:p-6">
+                {/* Mobile-first layout */}
+                <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+                  {/* Profile Image - Better mobile sizing */}
+                  <div className="relative flex-shrink-0 mx-auto sm:mx-0">
+                    <Avatar className="w-20 h-20 sm:w-16 sm:h-16 border-2 border-purple-200">
                       {reviewer.profileImage ? (
                         <img 
                           src={reviewer.profileImage} 
@@ -372,18 +373,18 @@ export function ReviewersList() {
                   </div>
 
                   {/* Content */}
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-start justify-between mb-3">
-                      <div>
-                        <h3 className="text-xl font-semibold text-purple-900">@{reviewer.tiktokHandle}</h3>
-                        <p className="text-sm text-purple-600/80">
-                          music.dexsta.fun/{reviewer.reviewerUrl}
-                        </p>
-                      </div>
-                      <div className="flex items-center gap-2">
+                  <div className="flex-1 min-w-0 text-center sm:text-left">
+                    {/* Header - Better mobile layout */}
+                    <div className="mb-4">
+                      <h3 className="text-xl sm:text-xl font-semibold text-purple-900 mb-1">@{reviewer.tiktokHandle}</h3>
+                      <p className="text-sm text-purple-600/80 mb-3">
+                        music.dexsta.fun/{reviewer.reviewerUrl}
+                      </p>
+                      {/* Badges - Better mobile positioning */}
+                      <div className="flex items-center justify-center sm:justify-start gap-2 flex-wrap">
                         <Badge 
                           variant="secondary" 
-                          className={`${
+                          className={`text-xs ${
                             reviewer.isOnline 
                               ? 'bg-emerald-100 text-emerald-800' 
                               : 'bg-gray-100 text-gray-600'
@@ -391,78 +392,81 @@ export function ReviewersList() {
                         >
                           {reviewer.isOnline ? 'Online' : 'Offline'}
                         </Badge>
-                        <Badge variant="secondary" className="bg-purple-100 text-purple-800">
+                        <Badge variant="secondary" className="bg-purple-100 text-purple-800 text-xs">
                           ⭐ {reviewer.averageRating}
                         </Badge>
                       </div>
                     </div>
 
-                    {/* Stats */}
-                    <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-4">
-                      <div className="text-center p-3 bg-purple-50/80 rounded-xl">
+                    {/* Stats - Better mobile grid */}
+                    <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 sm:gap-4 mb-4">
+                      <div className="text-center p-2 sm:p-3 bg-purple-50/80 rounded-lg sm:rounded-xl">
                         <div className="flex items-center justify-center gap-1 mb-1">
-                          <Clock className="w-4 h-4 text-purple-600" />
-                          <span className="text-sm text-purple-600">Queue</span>
+                          <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-purple-600" />
+                          <span className="text-xs sm:text-sm text-purple-600">Queue</span>
                         </div>
-                        <p className="text-lg font-semibold text-purple-900">{reviewer.queueLength}</p>
+                        <p className="text-sm sm:text-lg font-semibold text-purple-900">{reviewer.queueLength}</p>
                       </div>
                       
-                      <div className="text-center p-3 bg-purple-50/80 rounded-xl">
+                      <div className="text-center p-2 sm:p-3 bg-purple-50/80 rounded-lg sm:rounded-xl">
                         <div className="flex items-center justify-center gap-1 mb-1">
-                          <Star className="w-4 h-4 text-purple-600" />
-                          <span className="text-sm text-purple-600">Reviews</span>
+                          <Star className="w-3 h-3 sm:w-4 sm:h-4 text-purple-600" />
+                          <span className="text-xs sm:text-sm text-purple-600">Reviews</span>
                         </div>
-                        <p className="text-lg font-semibold text-purple-900">{reviewer.reviewsCompleted}</p>
+                        <p className="text-sm sm:text-lg font-semibold text-purple-900">{reviewer.reviewsCompleted}</p>
                       </div>
                       
-                      <div className="text-center p-3 bg-purple-50/80 rounded-xl">
+                      <div className="text-center p-2 sm:p-3 bg-purple-50/80 rounded-lg sm:rounded-xl">
                         <div className="flex items-center justify-center gap-1 mb-1">
-                          <DollarSign className="w-4 h-4 text-green-600" />
-                          <span className="text-sm text-purple-600">USD</span>
+                          <DollarSign className="w-3 h-3 sm:w-4 sm:h-4 text-green-600" />
+                          <span className="text-xs sm:text-sm text-purple-600">USD</span>
                         </div>
-                        <p className="text-lg font-semibold text-purple-900">${reviewer.skipLinePriceUsd}</p>
+                        <p className="text-sm sm:text-lg font-semibold text-purple-900">${reviewer.skipLinePriceUsd}</p>
                       </div>
                       
-                      <div className="text-center p-3 bg-purple-50/80 rounded-xl">
+                      <div className="text-center p-2 sm:p-3 bg-purple-50/80 rounded-lg sm:rounded-xl">
                         <div className="flex items-center justify-center gap-1 mb-1">
-                          <Coins className="w-4 h-4 text-blue-600" />
-                          <span className="text-sm text-purple-600">SEI</span>
+                          <Coins className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600" />
+                          <span className="text-xs sm:text-sm text-purple-600">SEI</span>
                         </div>
-                        <p className="text-lg font-semibold text-purple-900">{reviewer.skipLinePriceSei}</p>
+                        <p className="text-sm sm:text-lg font-semibold text-purple-900">{reviewer.skipLinePriceSei}</p>
                       </div>
                       
-                      <div className="text-center p-3 bg-purple-50/80 rounded-xl">
+                      <div className="text-center p-2 sm:p-3 bg-purple-50/80 rounded-lg sm:rounded-xl col-span-3 sm:col-span-1">
                         <div className="flex items-center justify-center gap-1 mb-1">
-                          <Zap className="w-4 h-4 text-purple-600" />
-                          <span className="text-sm text-purple-600">Free Skips</span>
+                          <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-purple-600" />
+                          <span className="text-xs sm:text-sm text-purple-600">Free Skips</span>
                         </div>
-                        <p className="text-lg font-semibold text-purple-900">{reviewer.freeSkips}</p>
+                        <p className="text-sm sm:text-lg font-semibold text-purple-900">{reviewer.freeSkips}</p>
                       </div>
                     </div>
 
-                    {/* Actions */}
-                    <div className="flex items-center gap-3">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => window.open(`https://music.dexsta.fun/${reviewer.reviewerUrl}`, "_blank")}
-                        className="border-purple-300 text-purple-700 hover:bg-purple-100 rounded-xl"
-                      >
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Visit Page
-                      </Button>
+                    {/* Actions - Better mobile layout */}
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+                      <div className="flex items-center gap-2 sm:gap-3">
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          onClick={() => window.open(`https://music.dexsta.fun/${reviewer.reviewerUrl}`, "_blank")}
+                          className="border-purple-300 text-purple-700 hover:bg-purple-100 rounded-xl flex-1 sm:flex-none"
+                        >
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          <span className="hidden sm:inline">Visit Page</span>
+                          <span className="sm:hidden">Visit</span>
+                        </Button>
 
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => window.open(`https://tiktok.com/${reviewer.tiktokHandle}`, "_blank")}
-                        className="border-purple-300 text-purple-700 hover:bg-purple-100 rounded-xl"
-                      >
-                        <Music className="w-4 h-4 mr-2" />
-                        TikTok
-                      </Button>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          onClick={() => window.open(`https://tiktok.com/${reviewer.tiktokHandle}`, "_blank")}
+                          className="border-purple-300 text-purple-700 hover:bg-purple-100 rounded-xl flex-1 sm:flex-none"
+                        >
+                          <Music className="w-4 h-4 mr-2" />
+                          TikTok
+                        </Button>
+                      </div>
 
-                      <div className="text-xs text-purple-600/80 ml-auto">
+                      <div className="text-xs text-purple-600/80 text-center sm:text-right sm:ml-auto">
                         Last active: {formatLastActive(reviewer.lastActive)}
                       </div>
                     </div>
