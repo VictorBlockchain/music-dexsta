@@ -220,14 +220,14 @@ export default function ReviewerPage() {
       {/* Header */}
       <header className="sticky top-0 z-50 w-full bg-white/10 backdrop-blur-xl border-b border-white/20 shadow-lg">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="inline-flex items-center justify-center w-10 h-10 relative group">
+          <Link href="/" className="flex items-center gap-2 sm:gap-3">
+            <div className="inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-amber-400 rounded-xl blur-md opacity-70 group-hover:scale-110 transition-transform duration-500"></div>
               <div className="relative bg-white/90 backdrop-blur-sm rounded-xl w-full h-full flex items-center justify-center shadow-md">
-                <Music className="w-5 h-5 text-purple-600 group-hover:scale-110 transition-transform duration-300" />
+                <Music className="w-4 h-4 sm:w-5 sm:h-5 text-purple-600 group-hover:scale-110 transition-transform duration-300" />
               </div>
             </div>
-            <h1 className="text-xl font-bold text-white tracking-tight font-heading hidden sm:block">
+            <h1 className="text-lg sm:text-xl font-bold text-white tracking-tight font-heading hidden sm:block">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-amber-300">
                 dexsta
               </span>
@@ -235,9 +235,10 @@ export default function ReviewerPage() {
           </Link>
           
           <Link href="/">
-            <Button variant="outline" className="border-purple-300 text-purple-700 hover:bg-purple-100 rounded-xl">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Home
+            <Button variant="outline" className="border-purple-300 text-purple-700 hover:bg-purple-100 rounded-xl text-sm sm:text-base">
+              <ArrowLeft className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+              <span className="hidden sm:inline">Back to Home</span>
+              <span className="sm:hidden">Back</span>
             </Button>
           </Link>
         </div>
@@ -246,11 +247,12 @@ export default function ReviewerPage() {
       <main className="container mx-auto px-4 py-8">
         {/* Reviewer Profile Card */}
         <Card className="bg-white/90 backdrop-blur-xl border-0 text-purple-900 shadow-2xl rounded-3xl overflow-hidden mb-8">
-          <CardContent className="p-8">
-            <div className="flex flex-col md:flex-row items-start gap-6">
-              {/* Profile Image */}
-              <div className="relative">
-                <Avatar className="h-24 w-24 border-4 border-purple-400">
+          <CardContent className="p-4 sm:p-8">
+            {/* Mobile-first layout */}
+            <div className="flex flex-col sm:flex-row sm:items-start gap-6">
+              {/* Profile Image - Better mobile sizing */}
+              <div className="relative flex-shrink-0 mx-auto sm:mx-0">
+                <Avatar className="h-28 w-28 sm:h-24 sm:w-24 border-4 border-purple-400">
                   {reviewer.profileImage ? (
                     <img src={reviewer.profileImage} alt={reviewer.tiktokHandle} className="object-cover" />
                   ) : (
@@ -268,13 +270,13 @@ export default function ReviewerPage() {
               </div>
 
               {/* Reviewer Info */}
-              <div className="flex-1 space-y-4">
+              <div className="flex-1 space-y-4 text-center sm:text-left">
                 <div>
-                  <h1 className="text-3xl font-bold font-heading text-purple-900 mb-2">
+                  <h1 className="text-2xl sm:text-3xl font-bold font-heading text-purple-900 mb-2">
                     @{reviewer.tiktokHandle}
                   </h1>
-                  <p className="text-purple-600/80 text-lg flex items-center gap-2">
-                    <Music className="w-5 h-5" />
+                  <p className="text-purple-600/80 text-base sm:text-lg flex items-center justify-center sm:justify-start gap-2">
+                    <Music className="w-4 h-4 sm:w-5 sm:h-5" />
                     music.dexsta.fun/{reviewer.reviewerUrl}
                   </p>
                   {reviewer.bio && (
@@ -284,32 +286,32 @@ export default function ReviewerPage() {
                   )}
                 </div>
 
-                {/* Stats Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-                  <div className="text-center p-3 bg-purple-50/80 rounded-xl">
-                    <Clock className="w-6 h-6 text-purple-500 mx-auto mb-1" />
-                    <p className="text-sm text-purple-600/80">Queue</p>
-                    <p className="text-xl font-bold text-purple-900">{reviewer.queueLength}</p>
+                {/* Stats Grid - Better mobile layout */}
+                <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 sm:gap-4">
+                  <div className="text-center p-2 sm:p-3 bg-purple-50/80 rounded-lg sm:rounded-xl">
+                    <Clock className="w-4 h-4 sm:w-6 sm:h-6 text-purple-500 mx-auto mb-1" />
+                    <p className="text-xs sm:text-sm text-purple-600/80">Queue</p>
+                    <p className="text-sm sm:text-xl font-bold text-purple-900">{reviewer.queueLength}</p>
                   </div>
-                  <div className="text-center p-3 bg-purple-50/80 rounded-xl">
-                    <Star className="w-6 h-6 text-amber-500 mx-auto mb-1" />
-                    <p className="text-sm text-purple-600/80">Reviews</p>
-                    <p className="text-xl font-bold text-purple-900">{reviewer.reviewsCompleted}</p>
+                  <div className="text-center p-2 sm:p-3 bg-purple-50/80 rounded-lg sm:rounded-xl">
+                    <Star className="w-4 h-4 sm:w-6 sm:h-6 text-amber-500 mx-auto mb-1" />
+                    <p className="text-xs sm:text-sm text-purple-600/80">Reviews</p>
+                    <p className="text-sm sm:text-xl font-bold text-purple-900">{reviewer.reviewsCompleted}</p>
                   </div>
-                  <div className="text-center p-3 bg-purple-50/80 rounded-xl">
-                    <DollarSign className="w-6 h-6 text-green-500 mx-auto mb-1" />
-                    <p className="text-sm text-purple-600/80">Skip USD</p>
-                    <p className="text-xl font-bold text-purple-900">${reviewer.skipLinePriceUsd}</p>
+                  <div className="text-center p-2 sm:p-3 bg-purple-50/80 rounded-lg sm:rounded-xl">
+                    <DollarSign className="w-4 h-4 sm:w-6 sm:h-6 text-green-500 mx-auto mb-1" />
+                    <p className="text-xs sm:text-sm text-purple-600/80">USD</p>
+                    <p className="text-sm sm:text-xl font-bold text-purple-900">${reviewer.skipLinePriceUsd}</p>
                   </div>
-                  <div className="text-center p-3 bg-purple-50/80 rounded-xl">
-                    <Coins className="w-6 h-6 text-blue-500 mx-auto mb-1" />
-                    <p className="text-sm text-purple-600/80">Skip SEI</p>
-                    <p className="text-xl font-bold text-purple-900">{reviewer.skipLinePriceSei}</p>
+                  <div className="text-center p-2 sm:p-3 bg-purple-50/80 rounded-lg sm:rounded-xl">
+                    <Coins className="w-4 h-4 sm:w-6 sm:h-6 text-blue-500 mx-auto mb-1" />
+                    <p className="text-xs sm:text-sm text-purple-600/80">SEI</p>
+                    <p className="text-sm sm:text-xl font-bold text-purple-900">{reviewer.skipLinePriceSei}</p>
                   </div>
-                  <div className="text-center p-3 bg-purple-50/80 rounded-xl">
-                    <Zap className="w-6 h-6 text-blue-500 mx-auto mb-1" />
-                    <p className="text-sm text-purple-600/80">Free Skips</p>
-                    <p className="text-xl font-bold text-purple-900">{reviewer.freeSkips}</p>
+                  <div className="text-center p-2 sm:p-3 bg-purple-50/80 rounded-lg sm:rounded-xl col-span-3 sm:col-span-1">
+                    <Zap className="w-4 h-4 sm:w-6 sm:h-6 text-blue-500 mx-auto mb-1" />
+                    <p className="text-xs sm:text-sm text-purple-600/80">Free Skips</p>
+                    <p className="text-sm sm:text-xl font-bold text-purple-900">{reviewer.freeSkips}</p>
                   </div>
                 </div>
               </div>
@@ -320,15 +322,15 @@ export default function ReviewerPage() {
         {/* Music Links */}
         {(reviewer.dexstaProfile || reviewer.spotifyProfile || reviewer.soundcloudProfile || reviewer.youtubeProfile) && (
           <Card className="bg-white/90 backdrop-blur-xl border-0 text-purple-900 shadow-2xl rounded-3xl overflow-hidden mb-8">
-            <CardHeader className="px-8 pt-8 pb-6">
-              <CardTitle className="text-2xl font-bold text-center font-heading">
+            <CardHeader className="px-4 sm:px-8 pt-6 sm:pt-8 pb-4 sm:pb-6">
+              <CardTitle className="text-xl sm:text-2xl font-bold text-center font-heading">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500">
                   Music Links
                 </span>
               </CardTitle>
             </CardHeader>
-            <CardContent className="px-8 pb-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <CardContent className="px-4 sm:px-8 pb-6 sm:pb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {reviewer.dexstaProfile && (
                   <Button
                     variant="outline"
