@@ -197,27 +197,27 @@ export default function MusicSubmissionApp() {
 
             {/* Navigation Tabs */}
             <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full max-w-6xl mx-auto">
-              <TabsList className="grid w-full grid-cols-3 mb-8 bg-white/10 backdrop-blur-xl border-0 p-1 rounded-3xl shadow-lg">
+              <TabsList className="grid w-full grid-cols-3 mb-8 bg-white/10 backdrop-blur-xl border-0 p-2 rounded-3xl shadow-lg">
                 <TabsTrigger
                   value="reviewers"
-                  className="flex items-center justify-center gap-2 rounded-2xl text-purple-100/60 data-[state=active]:bg-white data-[state=active]:text-purple-600 data-[state=active]:shadow-lg data-[state=active]:scale-105 transition-all duration-300 hover:text-white hover:bg-white/20 font-medium py-3 px-4"
+                  className="flex items-center justify-center gap-2 rounded-2xl text-purple-100/70 data-[state=active]:bg-white data-[state=active]:text-purple-600 data-[state=active]:shadow-lg data-[state=active]:scale-[1.02] transition-all duration-300 hover:text-white hover:bg-white/20 font-medium py-4 px-6 text-sm"
                 >
                   <Users className="w-4 h-4" />
-                  <span className="font-medium">Reviewers</span>
+                  <span>Reviewers</span>
                 </TabsTrigger>
                 <TabsTrigger
                   value="howto"
-                  className="flex items-center justify-center gap-2 rounded-2xl text-purple-100/60 data-[state=active]:bg-white data-[state=active]:text-purple-600 data-[state=active]:shadow-lg data-[state=active]:scale-105 transition-all duration-300 hover:text-white hover:bg-white/20 font-medium py-3 px-4"
+                  className="flex items-center justify-center gap-2 rounded-2xl text-purple-100/70 data-[state=active]:bg-white data-[state=active]:text-purple-600 data-[state=active]:shadow-lg data-[state=active]:scale-[1.02] transition-all duration-300 hover:text-white hover:bg-white/20 font-medium py-4 px-6 text-sm"
                 >
                   <BookOpen className="w-4 h-4" />
-                  <span className="font-medium">How To</span>
+                  <span>How To</span>
                 </TabsTrigger>
                 <TabsTrigger
                   value="nfts"
-                  className="flex items-center justify-center gap-2 rounded-2xl text-purple-100/60 data-[state=active]:bg-white data-[state=active]:text-purple-600 data-[state=active]:shadow-lg data-[state=active]:scale-105 transition-all duration-300 hover:text-white hover:bg-white/20 font-medium py-3 px-4"
+                  className="flex items-center justify-center gap-2 rounded-2xl text-purple-100/70 data-[state=active]:bg-white data-[state=active]:text-purple-600 data-[state=active]:shadow-lg data-[state=active]:scale-[1.02] transition-all duration-300 hover:text-white hover:bg-white/20 font-medium py-4 px-6 text-sm"
                 >
                   <Sparkles className="w-4 h-4" />
-                  <span className="font-medium">Music NFTs</span>
+                  <span>Music NFTs</span>
                 </TabsTrigger>
               </TabsList>
 

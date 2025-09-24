@@ -176,34 +176,34 @@ function ReviewPageContent() {
 
         {/* Navigation Tabs */}
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full max-w-6xl mx-auto">
-          <TabsList className="grid w-full grid-cols-4 mb-8 bg-white/10 backdrop-blur-xl border-0 p-1 rounded-3xl shadow-lg">
+          <TabsList className="grid w-full grid-cols-4 mb-8 bg-white/10 backdrop-blur-xl border-0 p-2 rounded-3xl shadow-lg">
             <TabsTrigger
               value="form"
-              className="flex items-center justify-center gap-2 rounded-2xl text-purple-100/60 data-[state=active]:bg-white data-[state=active]:text-purple-600 data-[state=active]:shadow-lg data-[state=active]:scale-105 transition-all duration-300 hover:text-white hover:bg-white/20 font-medium py-3 px-4"
+              className="flex items-center justify-center gap-2 rounded-2xl text-purple-100/70 data-[state=active]:bg-white data-[state=active]:text-purple-600 data-[state=active]:shadow-lg data-[state=active]:scale-[1.02] transition-all duration-300 hover:text-white hover:bg-white/20 font-medium py-4 px-6 text-sm"
             >
               <Music className="w-4 h-4" />
-              <span className="hidden sm:inline font-semibold">Submit</span>
+              <span className="hidden sm:inline">Submit</span>
             </TabsTrigger>
             <TabsTrigger
               value="queue"
-              className="flex items-center justify-center gap-2 rounded-2xl text-purple-100/60 data-[state=active]:bg-white data-[state=active]:text-purple-600 data-[state=active]:shadow-lg data-[state=active]:scale-105 transition-all duration-300 hover:text-white hover:bg-white/20 font-medium py-3 px-4"
+              className="flex items-center justify-center gap-2 rounded-2xl text-purple-100/70 data-[state=active]:bg-white data-[state=active]:text-purple-600 data-[state=active]:shadow-lg data-[state=active]:scale-[1.02] transition-all duration-300 hover:text-white hover:bg-white/20 font-medium py-4 px-6 text-sm"
             >
               <Queue className="w-4 h-4" />
-              <span className="hidden sm:inline font-semibold">Queue</span>
+              <span className="hidden sm:inline">Queue</span>
             </TabsTrigger>
             <TabsTrigger
               value="history"
-              className="flex items-center justify-center gap-2 rounded-2xl text-purple-100/60 data-[state=active]:bg-white data-[state=active]:text-purple-600 data-[state=active]:shadow-lg data-[state=active]:scale-105 transition-all duration-300 hover:text-white hover:bg-white/20 font-medium py-3 px-4"
+              className="flex items-center justify-center gap-2 rounded-2xl text-purple-100/70 data-[state=active]:bg-white data-[state=active]:text-purple-600 data-[state=active]:shadow-lg data-[state=active]:scale-[1.02] transition-all duration-300 hover:text-white hover:bg-white/20 font-medium py-4 px-6 text-sm"
             >
               <History className="w-4 h-4" />
-              <span className="hidden sm:inline font-semibold">History</span>
+              <span className="hidden sm:inline">History</span>
             </TabsTrigger>
             <TabsTrigger
               value="settings"
-              className="flex items-center justify-center gap-2 rounded-2xl text-purple-100/60 data-[state=active]:bg-white data-[state=active]:text-purple-600 data-[state=active]:shadow-lg data-[state=active]:scale-105 transition-all duration-300 hover:text-white hover:bg-white/20 font-medium py-3 px-4"
+              className="flex items-center justify-center gap-2 rounded-2xl text-purple-100/70 data-[state=active]:bg-white data-[state=active]:text-purple-600 data-[state=active]:shadow-lg data-[state=active]:scale-[1.02] transition-all duration-300 hover:text-white hover:bg-white/20 font-medium py-4 px-6 text-sm"
             >
               <Settings className="w-4 h-4" />
-              <span className="hidden sm:inline font-semibold">Settings</span>
+              <span className="hidden sm:inline">Settings</span>
             </TabsTrigger>
           </TabsList>
 
