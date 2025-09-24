@@ -9,7 +9,7 @@ import { ReviewersList } from "@/components/reviewers-list"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Music, Upload, FileAudio, ArrowRight, Star, Users, BookOpen } from "lucide-react"
+import { Music, Upload, FileAudio, ArrowRight, Star, Users, BookOpen, Sparkles } from "lucide-react"
 import Link from "next/link"
 
 interface User {
@@ -197,7 +197,7 @@ export default function MusicSubmissionApp() {
 
             {/* Navigation Tabs */}
             <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full max-w-6xl mx-auto">
-              <TabsList className="grid w-full grid-cols-2 mb-8 bg-white/10 backdrop-blur-xl border-0 p-1 rounded-3xl shadow-lg">
+              <TabsList className="grid w-full grid-cols-3 mb-8 bg-white/10 backdrop-blur-xl border-0 p-1 rounded-3xl shadow-lg">
                 <TabsTrigger
                   value="reviewers"
                   className="flex items-center justify-center gap-2 rounded-2xl text-purple-100/60 data-[state=active]:bg-white data-[state=active]:text-purple-600 data-[state=active]:shadow-lg data-[state=active]:scale-105 transition-all duration-300 hover:text-white hover:bg-white/20 font-medium py-3 px-4"
@@ -211,6 +211,13 @@ export default function MusicSubmissionApp() {
                 >
                   <BookOpen className="w-4 h-4" />
                   <span className="font-semibold">How To</span>
+                </TabsTrigger>
+                <TabsTrigger
+                  value="nfts"
+                  className="flex items-center justify-center gap-2 rounded-2xl text-purple-100/60 data-[state=active]:bg-white data-[state=active]:text-purple-600 data-[state=active]:shadow-lg data-[state=active]:scale-105 transition-all duration-300 hover:text-white hover:bg-white/20 font-medium py-3 px-4"
+                >
+                  <Sparkles className="w-4 h-4" />
+                  <span className="font-semibold">Music NFTs</span>
                 </TabsTrigger>
               </TabsList>
 
@@ -305,6 +312,83 @@ export default function MusicSubmissionApp() {
                           </div>
                           <h5 className="font-semibold text-purple-900">Community</h5>
                           <p className="text-sm text-purple-700">Join a growing community of artists and music reviewers</p>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="nfts">
+                <Card className="bg-white/90 backdrop-blur-xl border-0 text-purple-900 shadow-2xl rounded-3xl overflow-hidden">
+                  <CardHeader className="px-8 pt-8 pb-6">
+                    <CardTitle className="text-2xl font-bold text-center font-heading">
+                      <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
+                        Music NFTs
+                      </span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="px-8 pb-8 space-y-8">
+                    {/* Hero Message */}
+                    <div className="text-center space-y-6">
+                      <div className="w-20 h-20 bg-gradient-to-r from-purple-500 via-pink-500 to-amber-400 rounded-full flex items-center justify-center mx-auto">
+                        <Sparkles className="w-10 h-10 text-white" />
+                      </div>
+                      <h2 className="text-3xl font-bold text-purple-900 font-heading">
+                        The Future of Music is Music NFTs
+                      </h2>
+                      <p className="text-lg text-purple-700 leading-relaxed max-w-2xl mx-auto">
+                        Join a community of web3 enthusiasts and collaborate with artists from around the world who are creating music NFTs!
+                      </p>
+                    </div>
+
+                    {/* Discord CTA */}
+                    <div className="pt-8 border-t border-purple-200/50">
+                      <div className="text-center space-y-4">
+                        <h3 className="text-xl font-semibold text-purple-900">Join the Dexsta Community</h3>
+                        <p className="text-purple-700">
+                          Connect with fellow artists, share your music, and discover the latest in music NFT technology
+                        </p>
+                        <a 
+                          href="https://discord.gg/x5KYusDzMQ" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-3 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-purple-500/30 transition-all duration-300 transform hover:scale-[1.02] py-4 px-8 text-lg"
+                        >
+                          <Users className="w-5 h-5" />
+                          Join Discord Community
+                          <ArrowRight className="w-5 h-5" />
+                        </a>
+                        <p className="text-sm text-purple-600/80">
+                          Connect with artists worldwide and explore the future of music
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Features */}
+                    <div className="space-y-6 pt-8 border-t border-purple-200/50">
+                      <h4 className="text-xl font-semibold text-purple-900 text-center">Why Music NFTs?</h4>
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div className="text-center space-y-3">
+                          <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto">
+                            <Sparkles className="w-8 h-8 text-white" />
+                          </div>
+                          <h5 className="font-semibold text-purple-900">Web3 Innovation</h5>
+                          <p className="text-sm text-purple-700">Be part of the cutting-edge technology revolutionizing music ownership and distribution</p>
+                        </div>
+                        <div className="text-center space-y-3">
+                          <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto">
+                            <Users className="w-8 h-8 text-white" />
+                          </div>
+                          <h5 className="font-semibold text-purple-900">Global Collaboration</h5>
+                          <p className="text-sm text-purple-700">Connect and collaborate with artists from around the world in the decentralized music ecosystem</p>
+                        </div>
+                        <div className="text-center space-y-3">
+                          <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto">
+                            <Music className="w-8 h-8 text-white" />
+                          </div>
+                          <h5 className="font-semibold text-purple-900">Own Your Music</h5>
+                          <p className="text-sm text-purple-700">Take control of your music rights and monetization through blockchain technology</p>
                         </div>
                       </div>
                     </div>
