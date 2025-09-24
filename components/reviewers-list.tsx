@@ -46,6 +46,8 @@ export function ReviewersList() {
           .from('profiles')
           .select('*')
           .not('tiktok_handle', 'is', null)
+          .not('tiktok_handle', 'eq', '')
+          .not('tiktok_handle', 'eq', 'null')
 
         console.log('Reviewers query result:', reviewersData)
         console.log('Reviewers query error:', error)
@@ -57,9 +59,18 @@ export function ReviewersList() {
         }
 
         if (reviewersData && reviewersData.length > 0) {
+          // Filter out profiles with null or empty TikTok handles
+          const validReviewers = reviewersData.filter(reviewer => 
+            reviewer.tiktok_handle && 
+            reviewer.tiktok_handle.trim() !== '' && 
+            reviewer.tiktok_handle !== 'null'
+          )
+          
+          console.log('Valid reviewers after filtering:', validReviewers.length, 'out of', reviewersData.length)
+          
           // Load queue length and reviews completed for each reviewer
           const reviewersWithStats = await Promise.all(
-            reviewersData.map(async (reviewer) => {
+            validReviewers.map(async (reviewer) => {
               // Get queue length (pending submissions)
               const { data: queueData } = await supabase
                 .from('submissions')
