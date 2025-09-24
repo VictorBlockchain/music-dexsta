@@ -203,21 +203,21 @@ export default function MusicSubmissionApp() {
                   className="flex items-center justify-center gap-2 rounded-2xl text-purple-100/60 data-[state=active]:bg-white data-[state=active]:text-purple-600 data-[state=active]:shadow-lg data-[state=active]:scale-105 transition-all duration-300 hover:text-white hover:bg-white/20 font-medium py-3 px-4"
                 >
                   <Users className="w-4 h-4" />
-                  <span className="font-semibold">Reviewers</span>
+                  <span className="font-medium">Reviewers</span>
                 </TabsTrigger>
                 <TabsTrigger
                   value="howto"
                   className="flex items-center justify-center gap-2 rounded-2xl text-purple-100/60 data-[state=active]:bg-white data-[state=active]:text-purple-600 data-[state=active]:shadow-lg data-[state=active]:scale-105 transition-all duration-300 hover:text-white hover:bg-white/20 font-medium py-3 px-4"
                 >
                   <BookOpen className="w-4 h-4" />
-                  <span className="font-semibold">How To</span>
+                  <span className="font-medium">How To</span>
                 </TabsTrigger>
                 <TabsTrigger
                   value="nfts"
                   className="flex items-center justify-center gap-2 rounded-2xl text-purple-100/60 data-[state=active]:bg-white data-[state=active]:text-purple-600 data-[state=active]:shadow-lg data-[state=active]:scale-105 transition-all duration-300 hover:text-white hover:bg-white/20 font-medium py-3 px-4"
                 >
                   <Sparkles className="w-4 h-4" />
-                  <span className="font-semibold">Music NFTs</span>
+                  <span className="font-medium">Music NFTs</span>
                 </TabsTrigger>
               </TabsList>
 
