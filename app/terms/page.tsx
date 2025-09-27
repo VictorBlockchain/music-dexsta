@@ -38,106 +38,132 @@ export default function TermsPage() {
         <div className="max-w-4xl mx-auto">
           <div className="bg-white/90 backdrop-blur-xl border-0 text-purple-900 shadow-2xl rounded-3xl overflow-hidden">
             <div className="p-8 md:p-12 space-y-8">
-              <div>
-                <h2 className="text-2xl font-bold text-purple-900 mb-4">1. Acceptance of Terms</h2>
-                <p className="text-purple-800 leading-relaxed">
-                  By accessing and using dexsta, you accept and agree to be bound by the terms and provision of this agreement. 
-                  If you do not agree to abide by the above, please do not use this service.
+              <div className="text-center mb-8">
+                <p className="text-sm text-purple-600">
+                  Last updated: 9/27/2025
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-purple-900 mb-4">2. Use License</h2>
-                <p className="text-purple-800 leading-relaxed mb-4">
-                  Permission is granted to temporarily use dexsta for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+                <p className="text-purple-800 leading-relaxed mb-6">
+                  Welcome to music.dexsta.fun ("Dexsta" or the "Service"). These Terms of Service ("Terms") govern your use of Dexsta. By using Dexsta, you agree to these Terms. If you do not agree, please do not use the Service.
                 </p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold text-purple-900 mb-4">1. Definitions</h2>
+                <p className="text-purple-800 leading-relaxed mb-4">
+                  <strong>"Artist," "User," "You":</strong> any individual or entity who creates an account or uploads content to Dexsta.
+                </p>
+                <p className="text-purple-800 leading-relaxed mb-4">
+                  <strong>"Content":</strong> any music, audio files, lyrics, images, videos, name, likeness, biography, artwork, or other material you submit to the Service.
+                </p>
+                <p className="text-purple-800 leading-relaxed">
+                  <strong>"Streaming Use":</strong> hosting, caching, buffering, transmitting, and delivering your Content to listeners through Dexsta.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold text-purple-900 mb-4">2. Artist Ownership & Rights</h2>
+                <p className="text-purple-800 leading-relaxed mb-4">
+                  <strong>You retain all rights.</strong> You own and keep all rights, title, and interest in and to your Content, including all copyrights, performance rights, image and likeness rights, and publicity rights.
+                </p>
+                <p className="text-purple-800 leading-relaxed mb-4">
+                  <strong>No assignment.</strong> Dexsta does not claim ownership of your Content, your name, your image, or your likeness.
+                </p>
+                <p className="text-purple-800 leading-relaxed mb-4">
+                  <strong>Limited license.</strong> By uploading Content, you grant Dexsta a non-exclusive, worldwide, royalty-free, revocable license solely to:
+                </p>
+                <ul className="list-disc list-inside text-purple-800 space-y-2 ml-4 mb-4">
+                  <li>Host, store, and stream your Content on Dexsta;</li>
+                  <li>Perform necessary technical operations (transcoding, encryption, backups, indexing);</li>
+                  <li>Display your name, profile image, or biography on Dexsta alongside your Content.</li>
+                </ul>
+                <p className="text-purple-800 leading-relaxed mb-4">
+                  <strong>No sublicensing or off-platform use.</strong> Dexsta will not sublicense, sell, commercially exploit, or use your Content outside Dexsta without your express written permission.
+                </p>
+                <p className="text-purple-800 leading-relaxed">
+                  <strong>Revocation.</strong> You may remove your Content or terminate your account at any time. Upon removal, Dexsta will stop streaming your Content, except for in-flight streams already in progress.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold text-purple-900 mb-4">3. User Access Rights</h2>
+                <p className="text-purple-800 leading-relaxed">
+                  Dexsta grants listeners the right to access, stream, and play Content through the Service. This license does not include any right to copy, download, redistribute, or reuse Content outside Dexsta unless the Artist expressly allows it.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold text-purple-900 mb-4">4. Artist Responsibilities</h2>
+                <p className="text-purple-800 leading-relaxed mb-4">
+                  By uploading Content, you represent and warrant that:
+                </p>
+                <ul className="list-disc list-inside text-purple-800 space-y-2 ml-4 mb-4">
+                  <li>You own or have obtained all necessary rights and permissions for the Content;</li>
+                  <li>The Content does not infringe on any third-party rights;</li>
+                  <li>You are responsible for any royalties, licenses, or payments owed to rights organizations or third parties;</li>
+                  <li>The Content does not violate applicable laws.</li>
+                </ul>
+                <p className="text-purple-800 leading-relaxed">
+                  You agree to indemnify and hold Dexsta harmless from any claims arising from your Content.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold text-purple-900 mb-4">5. Content Management & Termination</h2>
                 <ul className="list-disc list-inside text-purple-800 space-y-2 ml-4">
-                  <li>modify or copy the materials</li>
-                  <li>use the materials for any commercial purpose or for any public display</li>
-                  <li>attempt to reverse engineer any software contained on the platform</li>
-                  <li>remove any copyright or other proprietary notations from the materials</li>
+                  <li>Dexsta may suspend, disable, or remove Content that violates these Terms or applicable laws.</li>
+                  <li>Dexsta may suspend or terminate accounts in cases of violation.</li>
+                  <li>You may terminate your account at any time and remove your Content.</li>
                 </ul>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-purple-900 mb-4">3. User Responsibilities</h2>
+                <h2 className="text-2xl font-bold text-purple-900 mb-4">6. Service Availability</h2>
+                <p className="text-purple-800 leading-relaxed">
+                  Dexsta provides the Service "as is" and does not guarantee uninterrupted or error-free access. Features may change or be discontinued at any time.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold text-purple-900 mb-4">7. Limitation of Liability</h2>
                 <p className="text-purple-800 leading-relaxed mb-4">
-                  As a user of dexsta, you agree to:
+                  To the maximum extent permitted by law:
                 </p>
                 <ul className="list-disc list-inside text-purple-800 space-y-2 ml-4">
-                  <li>Provide accurate and complete information when creating your account</li>
-                  <li>Only submit music that you own or have the right to submit</li>
-                  <li>Respect other users and maintain a positive community environment</li>
-                  <li>Not submit content that is illegal, harmful, or violates others' rights</li>
-                  <li>Not attempt to circumvent any security measures or payment systems</li>
+                  <li>Dexsta is not liable for indirect, incidental, consequential, or punitive damages.</li>
+                  <li>Dexsta's total liability for any claim will not exceed the greater of: (a) amounts you paid to Dexsta in the 12 months prior to the claim, or (b) $50.</li>
                 </ul>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-purple-900 mb-4">4. Content and Intellectual Property</h2>
-                <p className="text-purple-800 leading-relaxed mb-4">
-                  You retain ownership of any content you submit to dexsta.
-                </p>
+                <h2 className="text-2xl font-bold text-purple-900 mb-4">8. Changes to Terms</h2>
                 <p className="text-purple-800 leading-relaxed">
-                  You are responsible for ensuring that your content does not infringe on the intellectual property rights of others.
+                  Dexsta may update these Terms from time to time. Material changes will be notified via email or in-platform notice. Continued use after such changes constitutes acceptance. If you disagree, you may stop using the Service and remove your Content.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-purple-900 mb-4">5. Payment Terms</h2>
-                <p className="text-purple-800 leading-relaxed mb-4">
-                  Some features of dexsta may require payment. By making a payment, you agree to:
+                <h2 className="text-2xl font-bold text-purple-900 mb-4">9. Governing Law</h2>
+                <p className="text-purple-800 leading-relaxed">
+                  These Terms are governed by the laws of [Insert State/Country], without regard to conflict of law rules. Any disputes will be resolved in the courts of [Insert City/State].
                 </p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold text-purple-900 mb-4">10. General</h2>
                 <ul className="list-disc list-inside text-purple-800 space-y-2 ml-4">
-                  <li>Pay all fees and charges associated with your use of paid features</li>
-                  <li>Provide accurate billing information</li>
-                  <li>Authorize us to charge your payment method for applicable fees</li>
-                  <li>Understand that all sales are final unless otherwise specified</li>
+                  <li><strong>Severability:</strong> If any provision is held invalid, the rest remains in force.</li>
+                  <li><strong>No waiver:</strong> Dexsta's failure to enforce a provision is not a waiver of that right.</li>
+                  <li><strong>Entire agreement:</strong> These Terms constitute the full agreement between you and Dexsta regarding your Content and use of the Service.</li>
                 </ul>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold text-purple-900 mb-4">6. Privacy Policy</h2>
-                <p className="text-purple-800 leading-relaxed">
-                  Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the service, 
-                  to understand our practices.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold text-purple-900 mb-4">7. Termination</h2>
-                <p className="text-purple-800 leading-relaxed">
-                  We may terminate or suspend your account and access to the service immediately, without prior notice or liability, 
-                  for any reason whatsoever, including without limitation if you breach the Terms.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold text-purple-900 mb-4">8. Disclaimer</h2>
-                <p className="text-purple-800 leading-relaxed">
-                  The information on this platform is provided on an "as is" basis. To the fullest extent permitted by law, 
-                  this Company excludes all representations, warranties, conditions and terms relating to our platform and the use of this platform.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold text-purple-900 mb-4">9. Changes to Terms</h2>
-                <p className="text-purple-800 leading-relaxed">
-                  We reserve the right to modify these terms at any time. We will notify users of any material changes via email or 
-                  through the platform. Your continued use of the service after such modifications constitutes acceptance of the updated terms.
-                </p>
               </div>
               
               <div>
-                <h2 className="text-2xl font-bold text-purple-900 mb-4">10. Contact Information</h2>
+                <h2 className="text-2xl font-bold text-purple-900 mb-4">Contact</h2>
                 <p className="text-purple-800 leading-relaxed">
-                  If you have any questions about these Terms of Service, please contact us at support@dexsta.fun
-                </p>
-              </div>
-
-              <div className="pt-8 border-t border-purple-200">
-                <p className="text-sm text-purple-600 text-center">
-                  Last updated: {new Date().toLocaleDateString()}
+                  For questions about these Terms, please contact: support@dexsta.fun
                 </p>
               </div>
             </div>

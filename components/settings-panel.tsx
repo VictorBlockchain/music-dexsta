@@ -441,7 +441,7 @@ export function SettingsPanel({ user, isOwnProfile = true, reviewerId }: Setting
       setIsUploadingImage(false)
     }
   }
-
+  
   return (
     <div className="space-y-6">
       <Card className="bg-white/90 backdrop-blur-xl border-0 text-purple-900 shadow-2xl rounded-3xl overflow-hidden">

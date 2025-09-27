@@ -410,7 +410,7 @@ export default function ReviewerPage() {
                   <span className="hidden sm:inline">Settings</span>
                 </TabsTrigger>
               </TabsList>
-
+              
               <TabsContent value="form">
                 {reviewer.isOnline ? (
                   <SubmissionForm onSubmit={() => setActiveTab("queue")} user={user} reviewerId={reviewer.id} />

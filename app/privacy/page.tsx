@@ -38,143 +38,178 @@ export default function PrivacyPage() {
         <div className="max-w-4xl mx-auto">
           <div className="bg-white/90 backdrop-blur-xl border-0 text-purple-900 shadow-2xl rounded-3xl overflow-hidden">
             <div className="p-8 md:p-12 space-y-8">
+              <div className="text-center mb-8">
+                <p className="text-sm text-purple-600">
+                  Last updated: 9/27/2025
+                </p>
+              </div>
+
+              <div>
+                <p className="text-purple-800 leading-relaxed mb-6">
+                  Dexsta ("we," "our," "us") operates the website and service music.dexsta.fun (the "Service"). This Privacy Policy explains how we collect, use, and protect information from Artists and Users who access or use Dexsta.
+                </p>
+                <p className="text-purple-800 leading-relaxed mb-6">
+                  By using Dexsta, you agree to this Privacy Policy.
+                </p>
+                <div className="border-t border-purple-200 my-6"></div>
+              </div>
+
               <div>
                 <h2 className="text-2xl font-bold text-purple-900 mb-4">1. Information We Collect</h2>
                 <p className="text-purple-800 leading-relaxed mb-4">
-                  We collect information you provide directly to us, such as when you create an account, submit music, or contact us for support.
+                  We collect the following types of information:
                 </p>
-                <ul className="list-disc list-inside text-purple-800 space-y-2 ml-4">
-                  <li><strong>Account Information:</strong> Email address, username, TikTok handle, artist name</li>
-                  <li><strong>Profile Information:</strong> Profile image, bio, music platform links, payment preferences</li>
-                  <li><strong>Content:</strong> Music submissions, artwork, audio files, reviews, and comments</li>
-                  <li><strong>Payment Information:</strong> Billing details processed securely through third-party payment processors</li>
-                  <li><strong>Usage Data:</strong> How you interact with our platform, features used, and performance metrics</li>
-                </ul>
+                
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-purple-900 mb-3">a. Information You Provide</h3>
+                  <ul className="list-disc list-inside text-purple-800 space-y-2 ml-4">
+                    <li>Account details (name, email address, username, password).</li>
+                    <li>Profile details (artist name, biography, images).</li>
+                    <li>Uploaded content (music, audio, artwork, videos, text).</li>
+                    <li>Communications (messages, support requests).</li>
+                  </ul>
+                </div>
+
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-purple-900 mb-3">b. Information Collected Automatically</h3>
+                  <ul className="list-disc list-inside text-purple-800 space-y-2 ml-4">
+                    <li>Usage data (log-in times, IP address, device/browser type).</li>
+                    <li>Analytics data (interactions with features, streams played, referral sources).</li>
+                    <li>Cookies and similar technologies (to improve experience, security, and analytics).</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold text-purple-900 mb-3">c. Payment Information</h3>
+                  <p className="text-purple-800 leading-relaxed">
+                    If you purchase premium services or features, we may collect billing information through secure third-party providers (e.g., Stripe, PayPal). We do not store your full payment card details.
+                  </p>
+                </div>
+                <div className="border-t border-purple-200 my-6"></div>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-purple-900 mb-4">2. How We Use Your Information</h2>
+                <h2 className="text-2xl font-bold text-purple-900 mb-4">2. How We Use Information</h2>
                 <p className="text-purple-800 leading-relaxed mb-4">
-                  We use the information we collect to:
+                  We use your information to:
                 </p>
-                <ul className="list-disc list-inside text-purple-800 space-y-2 ml-4">
-                  <li>Provide, maintain, and improve our services</li>
-                  <li>Process music submissions and facilitate reviews</li>
-                  <li>Enable communication between artists and reviewers</li>
-                  <li>Process payments and manage billing</li>
-                  <li>Send you technical notices, updates, and support messages</li>
-                  <li>Respond to your comments and questions</li>
-                  <li>Monitor and analyze usage patterns to improve user experience</li>
-                  <li>Detect, prevent, and address technical issues and security concerns</li>
-                </ul>
+                <ol className="list-decimal list-inside text-purple-800 space-y-2 ml-4">
+                  <li>Provide and operate Dexsta's services (streaming, hosting, reviews).</li>
+                  <li>Authenticate accounts and maintain security.</li>
+                  <li>Improve functionality and user experience.</li>
+                  <li>Communicate with you about updates, features, or support.</li>
+                  <li>Process payments for premium services.</li>
+                  <li>Enforce our Terms of Service and comply with legal requirements.</li>
+                </ol>
+                <div className="border-t border-purple-200 my-6"></div>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-purple-900 mb-4">3. Information Sharing</h2>
-                <p className="text-purple-800 leading-relaxed mb-4">
-                  We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except in the following circumstances:
-                </p>
+                <h2 className="text-2xl font-bold text-purple-900 mb-4">3. Content Ownership & Rights</h2>
                 <ul className="list-disc list-inside text-purple-800 space-y-2 ml-4">
-                  <li><strong>Public Content:</strong> Music submissions and reviews are visible to other users as part of the platform's functionality</li>
-                  <li><strong>Service Providers:</strong> We may share information with trusted third parties who assist us in operating our platform (e.g., payment processors, cloud storage)</li>
-                  <li><strong>Legal Requirements:</strong> We may disclose information if required by law or to protect our rights and safety</li>
-                  <li><strong>Business Transfers:</strong> In the event of a merger or acquisition, user information may be transferred as part of the business assets</li>
+                  <li>Artists retain full rights to their music, image, name, likeness, and uploaded content.</li>
+                  <li>Dexsta only uses your content to provide streaming and display features within the Service.</li>
+                  <li>Dexsta does not sell, sublicense, or exploit your content outside of Dexsta without your permission.</li>
                 </ul>
+                <div className="border-t border-purple-200 my-6"></div>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-purple-900 mb-4">4. Data Security</h2>
+                <h2 className="text-2xl font-bold text-purple-900 mb-4">4. Sharing of Information</h2>
                 <p className="text-purple-800 leading-relaxed mb-4">
-                  We implement appropriate security measures to protect your personal information:
+                  We do not sell your personal information. We may share limited data:
                 </p>
                 <ul className="list-disc list-inside text-purple-800 space-y-2 ml-4">
-                  <li>Encryption of data in transit and at rest</li>
-                  <li>Secure authentication and access controls</li>
-                  <li>Regular security audits and updates</li>
-                  <li>Limited access to personal information on a need-to-know basis</li>
-                  <li>Secure payment processing through certified third-party providers</li>
+                  <li>With service providers (e.g., hosting, analytics, payment processors) to operate Dexsta.</li>
+                  <li>If required by law, regulation, legal process, or enforceable governmental request.</li>
+                  <li>In connection with a merger, acquisition, or sale of Dexsta's assets (with notice provided to you).</li>
+                </ul>
+                <div className="border-t border-purple-200 my-6"></div>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold text-purple-900 mb-4">5. Cookies & Tracking</h2>
+                <p className="text-purple-800 leading-relaxed mb-4">
+                  We use cookies and similar technologies to:
+                </p>
+                <ul className="list-disc list-inside text-purple-800 space-y-2 ml-4">
+                  <li>Keep you logged in.</li>
+                  <li>Measure usage and performance.</li>
+                  <li>Improve recommendations and features.</li>
                 </ul>
                 <p className="text-purple-800 leading-relaxed mt-4">
-                  However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your information, we cannot guarantee absolute security.
+                  You can manage or disable cookies through your browser settings, though some features may stop working.
                 </p>
+                <div className="border-t border-purple-200 my-6"></div>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-purple-900 mb-4">5. Data Retention</h2>
+                <h2 className="text-2xl font-bold text-purple-900 mb-4">6. Data Security</h2>
                 <p className="text-purple-800 leading-relaxed">
-                  We retain your information for as long as your account is active or as needed to provide you with services. We may retain certain information for longer periods for legitimate business purposes, such as preventing fraud, resolving disputes, and enforcing our agreements.
+                  We use industry-standard security measures to protect your personal data. However, no system is 100% secure. You share and upload at your own risk.
                 </p>
+                <div className="border-t border-purple-200 my-6"></div>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-purple-900 mb-4">6. Your Rights and Choices</h2>
+                <h2 className="text-2xl font-bold text-purple-900 mb-4">7. Data Retention</h2>
                 <p className="text-purple-800 leading-relaxed mb-4">
-                  You have certain rights regarding your personal information:
+                  We retain your personal data and uploaded content only as long as necessary to provide the Service.
                 </p>
                 <ul className="list-disc list-inside text-purple-800 space-y-2 ml-4">
-                  <li><strong>Access:</strong> Request access to the personal information we hold about you</li>
-                  <li><strong>Correction:</strong> Request correction of inaccurate or incomplete information</li>
-                  <li><strong>Deletion:</strong> Request deletion of your personal information (subject to certain limitations)</li>
-                  <li><strong>Portability:</strong> Request a copy of your data in a structured, machine-readable format</li>
-                  <li><strong>Opt-out:</strong> Unsubscribe from marketing communications at any time</li>
+                  <li>If you delete your account, we will remove personal data and content within a reasonable period, except where retention is required by law.</li>
                 </ul>
-                <p className="text-purple-800 leading-relaxed mt-4">
-                  To exercise these rights, please contact us at privacy@dexsta.fun
-                </p>
+                <div className="border-t border-purple-200 my-6"></div>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-purple-900 mb-4">7. Cookies and Tracking</h2>
+                <h2 className="text-2xl font-bold text-purple-900 mb-4">8. Your Privacy Rights</h2>
                 <p className="text-purple-800 leading-relaxed mb-4">
-                  We use cookies and similar tracking technologies to enhance your experience on our platform:
+                  Depending on your location, you may have rights to:
                 </p>
                 <ul className="list-disc list-inside text-purple-800 space-y-2 ml-4">
-                  <li><strong>Essential Cookies:</strong> Required for basic platform functionality</li>
-                  <li><strong>Analytics Cookies:</strong> Help us understand how users interact with our platform</li>
-                  <li><strong>Preference Cookies:</strong> Remember your settings and preferences</li>
+                  <li>Access and receive a copy of your personal data.</li>
+                  <li>Request correction or deletion of your personal data.</li>
+                  <li>Restrict or object to certain data processing.</li>
+                  <li>Withdraw consent (if processing was based on consent).</li>
                 </ul>
                 <p className="text-purple-800 leading-relaxed mt-4">
-                  You can control cookie settings through your browser preferences, though disabling certain cookies may affect platform functionality.
+                  To exercise your rights, contact us at [Insert Contact Email].
                 </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold text-purple-900 mb-4">8. Third-Party Services</h2>
-                <p className="text-purple-800 leading-relaxed">
-                  Our platform may integrate with third-party services (e.g., social media platforms, payment processors). These services have their own privacy policies, and we encourage you to review them. We are not responsible for the privacy practices of third-party services.
-                </p>
+                <div className="border-t border-purple-200 my-6"></div>
               </div>
 
               <div>
                 <h2 className="text-2xl font-bold text-purple-900 mb-4">9. Children's Privacy</h2>
                 <p className="text-purple-800 leading-relaxed">
-                  Our service is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If you become aware that a child has provided us with personal information, please contact us immediately.
+                  Dexsta is not directed to children under 13 (or under the minimum age required in your country). We do not knowingly collect personal data from children. If we learn we have done so, we will delete it.
                 </p>
+                <div className="border-t border-purple-200 my-6"></div>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-purple-900 mb-4">10. Changes to This Policy</h2>
+                <h2 className="text-2xl font-bold text-purple-900 mb-4">10. International Use</h2>
                 <p className="text-purple-800 leading-relaxed">
-                  We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new Privacy Policy on this page and updating the "Last updated" date. Your continued use of the service after such changes constitutes acceptance of the updated policy.
+                  If you access Dexsta from outside [Insert Country], your data may be transferred and processed in [Insert Country] where Dexsta is hosted. By using the Service, you consent to this.
                 </p>
+                <div className="border-t border-purple-200 my-6"></div>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-purple-900 mb-4">11. Contact Us</h2>
+                <h2 className="text-2xl font-bold text-purple-900 mb-4">11. Changes to This Privacy Policy</h2>
                 <p className="text-purple-800 leading-relaxed">
-                  If you have any questions about this Privacy Policy or our privacy practices, please contact us at:
+                  We may update this Privacy Policy from time to time. We will notify you of significant changes via email or in-platform notice. Continued use after changes constitutes acceptance.
                 </p>
-                <div className="mt-4 p-4 bg-purple-50 rounded-xl border border-purple-200">
-                  <p className="text-purple-800 font-medium">Email:</p>
-                  <p className="text-purple-700">privacy@dexsta.fun</p>
-                  <p className="text-purple-800 font-medium mt-2">Support:</p>
-                  <p className="text-purple-700">support@dexsta.fun</p>
-                </div>
+                <div className="border-t border-purple-200 my-6"></div>
               </div>
 
-              <div className="pt-8 border-t border-purple-200">
-                <p className="text-sm text-purple-600 text-center">
-                  Last updated: {new Date().toLocaleDateString()}
+              <div>
+                <h2 className="text-2xl font-bold text-purple-900 mb-4">12. Contact Us</h2>
+                <p className="text-purple-800 leading-relaxed mb-4">
+                  If you have questions or requests about this Privacy Policy, please contact us:
+                </p>
+                <p className="text-purple-800 font-medium">
+                  support@dexsta.fun
                 </p>
               </div>
             </div>
